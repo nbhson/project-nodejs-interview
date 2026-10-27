@@ -7,6 +7,7 @@
     <title>Socket IO</title>
 
     <!-- Link to CSS file-->
+    <link rel="stylesheet" href="css/ui-tokens.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"
       integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
@@ -23,5 +24,10 @@
 
     <!-- Link to the JavaScript file-->
     <script src="script.js" type="module"></script>
+    <button id="darkToggle" style="position:fixed;top:8px;right:8px;z-index:9999;padding:6px 12px;border-radius:8px;border:none;cursor:pointer;background:var(--ds-surface);color:var(--ds-text);">🌙</button>
+    <script>
+      const btn=document.getElementById('darkToggle');
+      btn&&btn.addEventListener('click',()=>{document.body.classList.toggle('dark');btn.textContent=document.body.classList.contains('dark')?'☀️':'🌙';});
+    </script>
   </body>
 </html>

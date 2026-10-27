@@ -71,3 +71,9 @@ button:hover {
   background-color: #d2dae2;
   color: #3d3d3d;
 }
+
+/* ===== Dark mode (design system) ===== */
+body.dark {
+  background: var(--ds-bg);
+  color: var(--ds-text);
+}
